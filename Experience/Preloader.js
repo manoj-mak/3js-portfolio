@@ -250,6 +250,7 @@ export default class Preloader extends EventEmitter {
                     },
                     ">-0.2"
                 )
+                
                 .to(
                     this.roomChildren.bed.scale,
                     {
@@ -261,6 +262,7 @@ export default class Preloader extends EventEmitter {
                     },
                     ">-0.15"
                 )
+                
                 .to(
                     this.roomChildren.desks.scale,
                     {

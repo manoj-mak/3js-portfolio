@@ -31,11 +31,13 @@ svg{
   --color-pink-light: #b7e2e2;
   --color-green-light: #7AD0AC;
   --color-blue-light: #b7e2e2;
+  --color-button-light: #0f534e;
 
   /* Dark Theme Variables */
   --color-text-dark: #cde6e7;
   --color-content-dark: #a8c6c7;
   --color-background-dark: #152947;
+  --color-button-dark: #337ab7;
 }
 
 .light-theme{
@@ -45,6 +47,7 @@ svg{
   --color-pink: var(--color-pink-light);
   --color-green: var(--color-green-light);
   --color-blue: var(--color-blue-light);
+  --color-button: var(--color-button-light);
 }
 
 .dark-theme{
@@ -54,6 +57,7 @@ svg{
   --color-pink: var(--color-text-dark);
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
+  --color-button: var(--color-button-dark);
 }
 
 /* Experience --------------------------------------------- */
@@ -185,6 +189,36 @@ svg{
 
   100%{
     transform: translateY(8px)
+  }
+}
+
+.my-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-button);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .my-button {
+      padding: 8px 16px;
+      margin-top: 10px;
+      margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-button {
+      padding: 6px 12px;
+      margin-top: 10px;
+      margin-right: 5px;
   }
 }
 

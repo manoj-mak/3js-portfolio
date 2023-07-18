@@ -291,7 +291,9 @@ export default class Preloader extends EventEmitter {
                     z: 1,
                     ease: "back.out(2.2)",
                     duration: 0.25,
-                })
+                },
+                ">-0.01"
+                )
                 .set(this.roomChildren.mini_floor.scale, {
                     x: 1,
                     y: 1,
@@ -324,7 +326,8 @@ export default class Preloader extends EventEmitter {
         });
     }
 
-    onScroll(e) {
+    onWheel(e) {
+        console.log('scrolling')
         if (e.deltaY > 0) {
             this.removeEventListeners();
             this.playSecondIntro();
@@ -346,6 +349,9 @@ export default class Preloader extends EventEmitter {
         this.intialY = null;
     }
 
+    
+
+
     removeEventListeners() {
         window.removeEventListener("wheel", this.scrollOnceEvent);
         window.removeEventListener("touchstart", this.touchStart);
@@ -356,7 +362,7 @@ export default class Preloader extends EventEmitter {
         this.scaleFlag = true;
         await this.firstIntro();
         this.moveFlag = true;
-        this.scrollOnceEvent = this.onScroll.bind(this);
+        this.scrollOnceEvent = this.onWheel.bind(this);
         this.touchStart = this.onTouch.bind(this);
         this.touchMove = this.onTouchMove.bind(this);
         window.addEventListener("wheel", this.scrollOnceEvent);

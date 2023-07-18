@@ -69,12 +69,12 @@ svg{
 .experience{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  
 }
 
 .experience-canvas{
   width: 100%;
-  height: 100%;
+  
 }
 
 .hidden{

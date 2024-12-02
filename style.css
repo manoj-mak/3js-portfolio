@@ -33,12 +33,14 @@ svg {
   --color-green-light: #7ad0ac;
   --color-blue-light: #b7e2e2;
   --color-button-light: #0f534e;
+  --color-icon-light: #73a6af;
 
   /* Dark Theme Variables */
   --color-text-dark: #cde6e7;
   --color-content-dark: #a8c6c7;
   --color-background-dark: #152947;
   --color-button-dark: #337ab7;
+  --color-icon-dark: #cde6e7;
 }
 
 .light-theme {
@@ -49,6 +51,7 @@ svg {
   --color-green: var(--color-green-light);
   --color-blue: var(--color-blue-light);
   --color-button: var(--color-button-light);
+  --color-icon: var(--color-icon-light);
 }
 
 .dark-theme {
@@ -59,6 +62,7 @@ svg {
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
   --color-button: var(--color-button-dark);
+  --color-icon: var(--color-icon-dark);
 }
 
 /* Experience --------------------------------------------- */
@@ -239,7 +243,7 @@ svg {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: var(--color-text);
+  color: var(--color-icon);
 }
 
 .toggle-button {

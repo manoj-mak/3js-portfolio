@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
-
+//main
 export default class Floor {
     constructor() {
         this.experience = new Experience();
@@ -27,7 +27,7 @@ export default class Floor {
         const geometry = new THREE.CircleGeometry(5, 64);
         const material = new THREE.MeshStandardMaterial({ color: 0x2d806c });
         const material2 = new THREE.MeshStandardMaterial({ color: 0x707372 });
-        const material3 = new THREE.MeshStandardMaterial({ color: 0x707372  });
+        const material3 = new THREE.MeshStandardMaterial({ color: 0x707372 });
 
         this.circleFirst = new THREE.Mesh(geometry, material);
         this.circleSecond = new THREE.Mesh(geometry, material2);
@@ -47,19 +47,19 @@ export default class Floor {
         this.circleFirst.rotation.x =
             this.circleSecond.rotation.x =
             this.circleThird.rotation.x =
-                -Math.PI / 2;
+            -Math.PI / 2;
 
         this.circleFirst.receiveShadow =
             this.circleSecond.receiveShadow =
             this.circleThird.receiveShadow =
-                true;
+            true;
 
         this.scene.add(this.circleFirst);
         this.scene.add(this.circleSecond);
         this.scene.add(this.circleThird);
     }
 
-    resize() {}
+    resize() { }
 
-    update() {}
+    update() { }
 }
